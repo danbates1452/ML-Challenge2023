@@ -1,4 +1,15 @@
-# ML-Challenge 2023
+# ML-Challenge ~~2023~~ 2024
+## 1st Place Submission Brief Write-up
+
+My final solution used a Stacking Ensemble of classifiers including a Random Forest, Decision Tree, and K Nearest Neighbours to predict the activity being performed in of each row of the provided accelerometer dataset. 
+
+These predictions are then used as input for the stacking ensemble's final estimator, which I used a K Nearest Neighbours model for as it yielded the best performance.
+
+This was all done linearly, as opposed to trying to model the data temporally (over time).
+
+This approach managed to get an accuracy of 98% for my validation set and an insane 99.5% for my test set. On a larger dataset, this likely would have struggled a bit, but for our relatively small sample, it fit quite well.
+
+---
 ## Task
 Your task is to classify sensor data to determine whether the movement is part of walking or driving. The data set has been prepared with columns representing time step, action (1 for walking and 4 for driving), and then the acceleration in the x, y and z. This data is a subset of the data from <a href="https://physionet.org/content/accelerometry-walk-climb-drive/1.0.0/#files">this dataset</a>. 
 
